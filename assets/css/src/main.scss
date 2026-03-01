@@ -1,0 +1,26 @@
+// ============================================
+// Marketplace Theme — Main SCSS Entry Point
+// ============================================
+
+// 1. Bootstrap — import from node_modules
+@use "../../../node_modules/bootstrap/scss/bootstrap";
+
+// 2. Base
+@use "base/variables";
+@use "base/reset";
+@use "base/typography";
+
+// 3. Layout
+@use "layout/header";
+@use "layout/footer";
+@use "layout/grid";
+
+// 4. Components
+@use "components/buttons";
+@use "components/cards";
+@use "components/forms";
+
+// 5. Pages
+@use "pages/shop";
+@use "pages/vendor";
+@use "pages/dashboard";

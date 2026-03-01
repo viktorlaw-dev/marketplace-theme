@@ -1,0 +1,31 @@
+{
+  "name": "marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+    "sass:build": "sass assets/css/src/main.scss assets/css/dist/main.min.css --style=compressed --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions --silence-deprecation=if-function",
+    "sass:watch": "sass assets/css/src/main.scss assets/css/dist/main.min.css --watch --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions --silence-deprecation=if-function",
+    "copy:bootstrap": "copy node_modules\\bootstrap\\dist\\js\\bootstrap.bundle.min.js assets\\js\\dist\\bootstrap.bundle.min.js",
+    "build": "npm run sass:build && npm run copy:bootstrap"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktorlaw-dev/marketplace-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/viktorlaw-dev/marketplace-theme/issues"
+  },
+  "homepage": "https://github.com/viktorlaw-dev/marketplace-theme#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
