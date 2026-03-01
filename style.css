@@ -1,0 +1,20 @@
+/*
+Theme Name:     Marketplace Theme
+Theme URI:      https://github.com/viktorlaw-dev/marketplace-theme
+Author:         Victor Lawrence
+Author URI:     https://github.com/viktorlaw-dev
+Description:    A custom multi-vendor marketplace theme built from scratch with WooCommerce, Bootstrap 5, and modern JavaScript. No page builders. No shortcuts.
+Version:        1.0.0
+Requires at least: 6.0
+Tested up to:   6.5
+Requires PHP:   8.0
+License:        GNU General Public License v2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:    marketplace
+*/
+
+/*
+ * DO NOT write CSS here.
+ * This file exists only for WordPress theme identification.
+ * All styles live in assets/css/
+ */
