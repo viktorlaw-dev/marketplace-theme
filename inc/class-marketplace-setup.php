@@ -72,4 +72,11 @@ class Marketplace_Setup {
         ) );
     }
 
+    // Load Google Font
+        add_action( 'wp_head', function() {
+        echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+        echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+        echo '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">';
+    });
+
 }

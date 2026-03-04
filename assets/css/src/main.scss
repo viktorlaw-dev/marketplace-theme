@@ -2,11 +2,11 @@
 // Marketplace Theme — Main SCSS Entry Point
 // ============================================
 
-// 1. Bootstrap — import from node_modules
+// 1. Bootstrap
 @use "../../../node_modules/bootstrap/scss/bootstrap";
 
-// 2. Base
-@use "base/variables";
+// 2. Base — variables must come first
+@use "base/variables" as *;
 @use "base/reset";
 @use "base/typography";
 

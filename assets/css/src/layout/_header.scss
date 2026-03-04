@@ -1,0 +1,50 @@
+// ============================================
+// Header / Navbar Styles
+// ============================================
+
+@use '../base/variables' as *;
+
+.navbar {
+    height: $navbar-height;
+    background-color: $navbar-bg;
+    box-shadow: $shadow-sm;
+    padding: 0 $spacing-md;
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: $font-size-lg;
+        color: $color-primary;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    .nav-link {
+        color: $color-primary;
+        font-weight: 500;
+        padding: $spacing-sm $spacing-md;
+        transition: color 0.2s ease;
+
+        &:hover,
+        &:focus {
+            color: $color-secondary;
+        }
+    }
+
+    .dropdown-menu {
+        border: none;
+        box-shadow: $shadow-md;
+        border-radius: $border-radius;
+    }
+
+    .dropdown-item {
+        font-weight: 500;
+        padding: $spacing-sm $spacing-md;
+
+        &:hover {
+            color: $color-secondary;
+            background-color: $color-light;
+        }
+    }
+}
