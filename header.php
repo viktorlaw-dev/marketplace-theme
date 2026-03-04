@@ -26,13 +26,14 @@
         <!-- Menu -->
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
             <?php
-                wp_nav_menu(array(
+                wp_nav_menu( array(
                     'theme_location' => 'primary',
                     'container'      => false,
                     'menu_class'     => 'navbar-nav',
                     'fallback_cb'    => false,
                     'depth'          => 2,
-                ));
+                    'walker'         => new Marketplace_Nav_Walker(),
+                ) );
             ?>
         </div>
 

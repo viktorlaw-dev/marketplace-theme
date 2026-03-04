@@ -18,10 +18,12 @@ require_once get_template_directory() . '/inc/helpers.php';
 require_once get_template_directory() . '/inc/enqueue.php';
 
 // Load classes
+// Load classes
 require_once get_template_directory() . '/inc/class-marketplace-setup.php';
 require_once get_template_directory() . '/inc/class-vendor-cpt.php';
 require_once get_template_directory() . '/inc/class-ajax-handlers.php';
 require_once get_template_directory() . '/inc/class-woo-customizer.php';
+require_once get_template_directory() . '/inc/class-nav-walker.php';
 
 // Initialize classes
 new Marketplace_Setup();
