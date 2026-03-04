@@ -16,27 +16,24 @@ class Marketplace_Setup {
 
     /**
      * Constructor — registers hooks only.
-     * Never put logic directly in the constructor.
      */
     public function __construct() {
         add_action( 'after_setup_theme', array( $this, 'init' ) );
         add_action( 'after_setup_theme', array( $this, 'register_image_sizes' ) );
         add_action( 'init', array( $this, 'register_menus' ) );
+        add_action( 'wp_head', array( $this, 'load_google_fonts' ) );
     }
 
     /**
      * Theme supports
      */
     public function init() {
-
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
-
         add_theme_support( 'woocommerce' );
         add_theme_support( 'wc-product-gallery-zoom' );
         add_theme_support( 'wc-product-gallery-lightbox' );
         add_theme_support( 'wc-product-gallery-slider' );
-
         add_theme_support( 'html5', array(
             'search-form',
             'comment-form',
@@ -46,10 +43,17 @@ class Marketplace_Setup {
             'style',
             'script',
         ) );
-
         add_theme_support( 'align-wide' );
-
         load_theme_textdomain( 'marketplace', get_template_directory() . '/languages' );
+    }
+
+    /**
+     * Load Google Fonts
+     */
+    public function load_google_fonts() {
+        echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+        echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+        echo '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">';
     }
 
     /**
@@ -71,12 +75,5 @@ class Marketplace_Setup {
             'vendor'  => __( 'Vendor Dashboard Menu', 'marketplace' ),
         ) );
     }
-
-    // Load Google Font
-        add_action( 'wp_head', function() {
-        echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
-        echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
-        echo '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">';
-    });
 
 }
