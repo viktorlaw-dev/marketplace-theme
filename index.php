@@ -12,48 +12,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<div class="container py-5">
-    
-    <!-- Hero Section -->
-    <div class="p-5 mb-4 bg-light rounded-3 text-center">
-        <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">
-                Welcome to <?php bloginfo( 'name' ); ?>
-            </h1>
-            <p class="col-md-8 fs-5 mx-auto">
-                <?php bloginfo( 'description' ); ?>
-            </p>
-            <a href="<?php echo esc_url( home_url('/shop') ); ?>" class="btn btn-primary btn-lg">
-                Explore Marketplace
-            </a>
-        </div>
+<section class="hero">
+    <div class="hero__content">
+        <h1 class="hero__title">
+            <?php bloginfo( 'name' ); ?>
+        </h1>
+        <p class="hero__subtitle">
+            <?php bloginfo( 'description' ); ?>
+        </p>
+        <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="btn btn-primary btn-lg mt-3">
+            <?php esc_html_e( 'Explore Marketplace', 'marketplace' ); ?>
+        </a>
     </div>
+</section>
 
-    <!-- Posts Loop -->
-    <?php if ( have_posts() ) : ?>
-        <div class="row">
+<div class="container py-5">
+    <div class="row">
+
+        <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h2 class="h5 card-title">
-                                <a href="<?php the_permalink(); ?>" class="text-decoration-none">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h2>
-                            <p class="card-text">
-                                <?php the_excerpt(); ?>
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-md-4 mb-4">
+                    <?php get_template_part( 'templates/shop/product-card' ); ?>
                 </div>
             <?php endwhile; ?>
-        </div>
-    <?php else : ?>
-        <p><?php esc_html_e( 'No content found.', 'marketplace' ); ?></p>
-    <?php endif; ?>
+        <?php else : ?>
+            <div class="col-12">
+                <p><?php esc_html_e( 'No products found.', 'marketplace' ); ?></p>
+            </div>
+        <?php endif; ?>
 
+    </div>
 </div>
 
-<?php
-get_footer();
+<?php get_footer(); ?>

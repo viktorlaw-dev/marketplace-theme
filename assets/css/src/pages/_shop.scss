@@ -1,0 +1,57 @@
+@use '../base/variables' as *;
+
+// ========================================
+// Shop Page - Hero Section Styles
+// ========================================
+
+.hero {
+  width: 100%;
+  background-color: $color-primary;
+  padding: $spacing-xl 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    color: $color-white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    color: $color-secondary;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  &__content {
+    max-width: 800px;
+    padding: 0 $spacing-md;
+    margin: 0 auto;
+  }
+}
+
+// ========================================
+// Responsive - Mobile
+// ========================================
+
+@media (max-width: 768px) {
+  .hero {
+    padding: $spacing-lg 0;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+

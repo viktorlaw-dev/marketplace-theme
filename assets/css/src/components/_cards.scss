@@ -1,0 +1,48 @@
+    @use '../base/variables' as *;
+
+    // Product Card Component
+
+.product-card {
+  background: $color-white;
+  border-radius: $border-radius;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+
+  // Product Image
+  &__image {
+    width: 100%;
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  // Card Content
+  &__body {
+    padding: 1rem;
+  }
+
+  // Product Title
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $color-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  // Product Price
+  &__price {
+    font-weight: bold;
+    color: $color-secondary;
+    font-size: 1rem;
+  }
+}
